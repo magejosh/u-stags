@@ -14,7 +14,7 @@ For example: <char=Morgan Jones:41; scorpio; brown-black hair; Green-Brown; 250l
 For each setting, use a concise description:
 
 <set=Location; Time Period; Description>
-For example: <set=New York; Near Future; bustling city, futuristic architecture>
+For example: <set=Ithaca:City, New York:State; Near Future; bustling city, futuristic architecture>
 
 4. Map Plot Events
 For each significant plot event, use:
@@ -29,13 +29,18 @@ Tone Tag: <tone=serious, suspenseful>
 6. Additional Elements
 You can also include other relevant story elements, such as:
 
+SideBeats: <sb=SideBeat1, SideBeat2> (e.g., <sb=support characters romCom, everyone always loses the macguffin>)
 Conflict: <conflict=Main Conflict>
 Resolution: <resolution=Ending Outcome>
 
+7. Advanced Mapping
+You can also wrap Settings, Additional Elements, as well as Themes and Tones tags inside Plot tags to increase dynamic context retention.
+Example: <plot=Chapter 5; Alien encounter((<theme=redemption, friendship>)<set=Garden of the Gods:LocName,CO:State,USA:Cntry; 3 days after story begins; Sun is setting in the State Park>); Alliance formed(<sb=support characters romCom, everyone always loses the macguffin>)>
+
 Guidelines:
-Compress Information: Aim to use concise phrases and abbreviations without losing essential context. For instance, instead of "brown-black hair," you might use "brn-blk hair."
+Compress Information: Aim to use concise phrases and abbreviations without losing essential context. For instance, instead of "brown-black hair," you should use "brn-blk hair."
 Standardize Formats: Maintain consistency in the format for each tag. This will make it easier to interpret and utilize the map.
-Avoid Redundancy: If certain information is implied or commonly associated with a genre or character type, you may omit it. For example, if the story is a typical romance, you might not need to specify common romantic themes.
+Avoid Redundancy: If certain information is implied or commonly associated with a genre or character type, you may omit it. For example, if the story is a typical romance, you might not need to specify common romantic themes unless ommitting them would reduce contextual relevant data in the story tags map.
 Iteratively Refine: Start with a broad map and refine it iteratively. Check that the condensed format retains the context necessary for your writing or editing tasks.
 
 Conclusion

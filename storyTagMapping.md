@@ -18,7 +18,6 @@ For example: <set=Ithaca:City, New York:State; Near Future; bustling city, futur
 
 4. Map Plot Events
 For each significant plot event, use:
-
 <plot=Chapter; Event; Consequence>
 For example: <plot=Chapter 5; Alien encounter; Alliance formed>
 
@@ -32,9 +31,13 @@ You can also include other relevant story elements, such as:
 SideBeats: <sb=SideBeat1, SideBeat2> (e.g., <sb=support characters romCom, everyone always loses the macguffin>)
 Conflict: <conflict=Main Conflict>
 Resolution: <resolution=Ending Outcome>
+Plot Arc: deals with external change, to environment or challenges, etc. <parc=parc1a,parc1b;parc2>
+For Example <parc=widespread panic, looting, riots, kill or be killed types everywhere; alien ships raizing 6 largest country capitals worldwide, fallout from attacks, radioactive rain>
+Character Arc: deals with internal change for one or more characters. <charc=charc1;charc2a,charc2b,charc2c>
+For Example <charc=insecure,socially awkward around those attracted to; acts foolish, alienates self from only interests, depression; rage; lessons learned take time, gratitude for opportunity to make amends>
 
 7. Advanced Mapping
-You can also wrap Settings, Additional Elements, as well as Themes and Tones tags inside Plot tags to increase dynamic context retention.
+You can also wrap Settings, Additional Elements, as well as Themes and Tones tags inside Plot Events tags to increase dynamic context retention.
 Example: <plot=Chapter 5; Alien encounter((<theme=redemption, friendship>)<set=Garden of the Gods:LocName,CO:State,USA:Cntry; 3 days after story begins; Sun is setting in the State Park>); Alliance formed(<sb=support characters romCom, everyone always loses the macguffin>)>
 
 Guidelines:

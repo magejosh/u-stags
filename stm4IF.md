@@ -1,4 +1,4 @@
-# U-Story Tag Mapping for Interactive Games
+# Story Tag Mapping for Interactive Fiction
 
 ## Overview
 
@@ -13,8 +13,8 @@ This document outlines the structure and usage of the XML format for story mappi
 
 ## Creating Your XML Story Map
 
-1. **Outline the Game Story**: Develop the plot, characters, and settings of your game.
+1. **Outline the Game Story**: Develop the plot's Decision Points, characters, and settings of your game.
 2. **Translate into XML**: Structure these elements into XML, ensuring clarity and coherence in the narrative flow.
 3. **Incorporate Dynamics**: Integrate challenges and mechanics that respond to player choices.
 
-Refer to `u-stags-xml-Example.xml` in the project repository for a detailed example of an XML story map.
+Refer to `stm-IF-Example.xml` in the project repository for a detailed example of an XML story map.

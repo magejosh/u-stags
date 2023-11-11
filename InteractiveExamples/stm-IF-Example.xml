@@ -15,7 +15,7 @@
 				   <option response="Inquire about the city's history" outcome="Reveal secret passage location"/>
 				   <option response="Discuss local issues" outcome="Gain side quest"/>
 				</dialogue>
-				</character>
+			</character>
             <character name="Sheriff Anna" age="38" traits="strong, determined" relevance="rescues player in ruins, was tracking bandits when she found the players">
 			   <backstory description="Uncover Sheriff Anna's journey from a rookie officer to the respected sheriff of Harmony Valley."/>
 			</character>
@@ -51,22 +51,27 @@
 			</mainQuestloop>
 
 			<sideQuest name="The Lost Heirloom" reward="Ancient Sword" completion="Gain trust with villagers">
-				<description details="Locate and return the lost heirloom of the village elder."/>
+				<description details="Locate and return the lost heirloom of the village elder." challenge="Bandits in Area, Lost Heirloom in beast lair.">
+					<action type="Searching for Lost Heirloom">
+						<challenge type="skill" difficulty="medium" variable="intelligence" successOutcome="Find Lost Heirloom" failureOutcome="Get lost, Attacked By Bandits, Tangle With Beast"/>
+							<outcome>Gain trust with villagers and unlock new quests.</outcome>
+					</action>
 			</sideQuest>
+		
+			<worldEvents> 
+				<worldEvent name="Festival of Harmony" chance="10%" impact="Increased NPC interactions">
+					<description details="The annual festival brings unique characters and quests to Harmony Valley."/>
+				</worldEvent>
+				<randomEvent triggerChance="20%" effect="Sudden storm">
+					<outcome>Seek shelter or brave the storm, affecting health and progress.</outcome>
+				</randomEvent>
+
+			</worldEvents>
+			
+			<theme main="discovery" sub="mystery"/>
+			<tone main="intriguing" sub="suspenseful"/>
 
 		</plot>
-		
-		<worldEvents> 
-			<worldEvent name="Festival of Harmony" chance="10%" impact="Increased NPC interactions">
-				<description details="The annual festival brings unique characters and quests to Harmony Valley."/>
-			</worldEvent>
-			<randomEvent triggerChance="20%" effect="Sudden storm">
-				<outcome>Seek shelter or brave the storm, affecting health and progress.</outcome>
-			</randomEvent>
 
-		</worldEvents>
-		
-        <theme main="discovery" sub="mystery"/>
-        <tone main="intriguing" sub="suspenseful"/>
     </game>
 </u-stags>

@@ -1,10 +1,10 @@
-# Adventure Mapping for U-Stags
+# Adventure Mapping for STM-IF
 
 ## Overview
 
 This guide explains how to create YAML files for interactive storytelling with U-Stags, using `adventureMap-Example.yaml` as a reference.
 
-## YAML Structure for GameGPT
+## YAML Structure for STM-IF
 
 - **Title**: The game's title.
 - **Start**: The starting point of the story.

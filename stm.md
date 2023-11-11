@@ -1,3 +1,5 @@
+# Story Tag Mapping (STM)
+
 Below are the instructions for mapping a story's context using the Universal Story Tags Mapping method. This approach aims to compress the information to the fullest extent while preserving valuable contextual details:
 
 1. Define Genre and Subgenre

@@ -1,0 +1,72 @@
+
+<u-stags>
+    <game title="The Mystery of the Lost City">
+        <genre main="mystery, adventure" sub="exploration"/>
+        <settings>
+            <setting name="Ancient City Ruins" time="Present" description="Mysterious and full of hidden treasures"/>
+            <setting name="Dark Forest" time="Present" description="Dense and mysterious, hiding secrets"/>
+            <setting name="Abandoned Village" time="Present" description="Deserted and eerie, site of unexpected events"/>
+            <setting name="Harmony Valley" time="Present" description="A bustling modern city with a small hospital"/>
+        </settings>
+        <characters>
+            <character name="Player" age="unknown" traits="unknown"/>
+            <character name="Mayor Green" age="45" traits="kind, nerdy-like, unimposing" relevance="former professor, leader of Harmony City">
+				<dialogue character="Mayor Green">
+				   <option response="Inquire about the city's history" outcome="Reveal secret passage location"/>
+				   <option response="Discuss local issues" outcome="Gain side quest"/>
+				</dialogue>
+				</character>
+            <character name="Sheriff Anna" age="38" traits="strong, determined" relevance="rescues player in ruins, was tracking bandits when she found the players">
+			   <backstory description="Uncover Sheriff Anna's journey from a rookie officer to the respected sheriff of Harmony Valley."/>
+			</character>
+            <character name="Miss Scarlet" age="30" traits="lost, mysterious" relevance="found in the wilderness"/>
+        </characters>
+        <plot>
+			<mainQuestloop>
+				<event name="Crossroads" decision="Decision to explore forest or village" outcome="Leads to different paths and encounters"/>
+				<event name="Forest">
+					<action type="Exploring">
+						<mechanic name="FindAmulet" chance="10%" variable="secretFound" successOutcome="Encounter with Miss Scarlet" failOutcome="Monster Encounter"/>
+						<challenge type="monster encounter" difficulty="medium" chance="10%" variable="stealth, combatSkill">
+							<result response="stealth" successOutcome="Evade Safely" failureOutcome="monster_attacks and Lose_health and Narrowly_Escape"/>
+							<result response="combatSkill" successOutcome="Drive Away Monster" failureOutcome="monster_attacks and Lose_health[Then, Loop.until.success-or-dead.unless-attempt-escape{Then, variable.stealth}]"/>
+						</challenge>
+					</action>
+				</event>
+				<event name="Ruins">
+					<action type="Searching for treasure">
+						<challenge type="enemy NPC" name="Rival Explorer" difficulty="hard" chance="10%" variable="combatSkill" successOutcome="Win key item" failureOutcome="Lose key item"/>
+					</action>
+				</event>
+				<event name="Village">
+					<action type="Navigating hazards">
+						<challenge type="environmental" difficulty="medium" variable="intelligence" successOutcome="Find shortcut" failureOutcome="Get lost"/>
+					</action>
+				</event>
+				<event name="Harmony Valley">
+					<action type="Investigating">
+						<interaction character="Mayor Green" difficulty="medium" variable="intelligence" successOutcome="Gain valuable information" failureOutcome="Misdirection"/>
+					</action>
+				</event>
+			</mainQuestloop>
+
+			<sideQuest name="The Lost Heirloom" reward="Ancient Sword" completion="Gain trust with villagers">
+				<description details="Locate and return the lost heirloom of the village elder."/>
+			</sideQuest>
+
+		</plot>
+		
+		<worldEvents> 
+			<worldEvent name="Festival of Harmony" chance="10%" impact="Increased NPC interactions">
+				<description details="The annual festival brings unique characters and quests to Harmony Valley."/>
+			</worldEvent>
+			<randomEvent triggerChance="20%" effect="Sudden storm">
+				<outcome>Seek shelter or brave the storm, affecting health and progress.</outcome>
+			</randomEvent>
+
+		</worldEvents>
+		
+        <theme main="discovery" sub="mystery"/>
+        <tone main="intriguing" sub="suspenseful"/>
+    </game>
+</u-stags>

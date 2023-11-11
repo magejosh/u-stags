@@ -1,0 +1,99 @@
+title: The Mystery of the Lost City
+start: You arrive at the ruins of an ancient city, rumored to hold a hidden treasure.
+
+variables:
+  stealth: 
+    description: "Affects ability to avoid danger in the forest."
+    level: 0
+  combatSkill: 
+    description: "Determines success in confrontations."
+    level: 0
+  intelligence: 
+    description: "Used for solving puzzles and making strategic decisions."
+    level: 0
+  metMayorGreen: false
+  metMissScarlet: false
+  rescueEvent: unknown
+  secretFound: false
+  trustLevel: 0
+  ancientCoins:
+    description: "Coins found in hidden locations or by completing tasks."
+    use: "Trade for vital equipment or information at a Shop in City"
+    quantity: 0
+
+steps:
+  - description: You stand at a crossroads. To the left lies a dark forest, to the right, an abandoned village.
+    id: step1
+    options:
+      - effect: { trustLevel: 1 }
+        id: option1
+        leadsTo: step2_forest
+        text: Enter the forest
+      - effect: { metMayorGreen: true, rescueEvent: random }
+        id: option2
+        leadsTo: step2_village
+        text: Explore the village
+
+  - description: In the forest, you find a mysterious amulet.
+    id: step2_forest
+    options:
+      - effect: { metMissScarlet: true, secretFound: true }
+        id: option3
+        leadsTo: step3_amulet
+        text: Take the amulet
+      - effect: { trustLevel: -1 }
+        id: option4
+        leadsTo: step3_no_amulet
+        text: Leave the amulet
+
+  - description: In the village, an unexpected event occurs and you need to be rescued.
+    id: step2_village
+    options:
+      - effect: { trustLevel: -2 }
+        id: option5
+        leadsTo: step3_rescue
+        text: Wait for rescue
+      - effect: { trustLevel: 1 }
+        id: option6
+        leadsTo: step3_self_rescue
+        text: Try to find your own way out
+  
+  - description: In the village, you find the local elder who knows about the ancient city.
+    id: step3_village_elder
+    options:
+      - text: "Ask about the city's history"
+        leadsTo: step4_history
+        effect: { intelligence: "+1" }
+      - text: "Inquire about the amulet"
+        leadsTo: step4_amulet_inquiry
+        effect: { metMissScarlet: true }
+  
+  - description: "A sudden storm hits while you're in the forest."
+    id: step4_storm
+    condition: { weather: "stormy" }
+    options:
+      - text: "Seek shelter"
+        leadsTo: step5_shelter
+      - text: "Brave the storm"
+        leadsTo: step5_continue
+        effect: { health: "-5", trustLevel: "-1" }
+
+  - description: "You find a hidden cache of ancient coins."
+    id: step5_cache
+    effect: { ancientCoins.quantity: "+10" }
+
+  - description: "At the city shop, you can trade coins for items."
+    id: step6_shop
+    options:
+      - text: "Trade 10 coins for a key"
+        effect: { ancientCoins.quantity: "-10", hasKey: true }
+
+endings:
+  - description: You've unlocked the secret of the amulet and found the treasure.
+    id: ending1
+  - description: You respect the forest's mystery and leave, wiser but without treasure.
+    id: ending2
+  - description: The elder's clues lead you to a hidden chamber full of ancient artifacts.
+    id: ending3
+  - description: You wander aimlessly through the ruins, missing the hidden secrets.
+    id: ending4

@@ -4,7 +4,7 @@
 
 This guide explains how to create YAML files for interactive storytelling with U-Stags, using `adventureMap-Example.yaml` as a reference.
 
-## YAML Structure for STM-IF
+## YAML Structure for STM4IF
 
 - **Title**: The game's title.
 - **Start**: The starting point of the story.

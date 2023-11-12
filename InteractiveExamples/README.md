@@ -6,7 +6,7 @@ This folder contains examples of the UI-STags (Universal Interactive Story Tags)
 
 ## File Description
 
-- `u-stags-xml-Example.xml`: An XML file demonstrating the UI-STags format for interactive storytelling. It includes elements like branching paths, character interactions, and decision points, specifically designed for game narratives.
+- `stm4IF-Example.xml`: An XML file demonstrating the UI-STags format for interactive storytelling. It includes elements like branching paths, character interactions, and decision points, specifically designed for game narratives.
 
 ## Using the Examples
 

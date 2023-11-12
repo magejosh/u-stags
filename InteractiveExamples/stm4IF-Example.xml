@@ -56,6 +56,7 @@
 						<challenge type="skill" difficulty="medium" variable="intelligence" successOutcome="Find Lost Heirloom" failureOutcome="Get lost, Attacked By Bandits, Tangle With Beast"/>
 							<outcome>Gain trust with villagers and unlock new quests.</outcome>
 					</action>
+				</description>
 			</sideQuest>
 		
 			<worldEvents> 
@@ -64,6 +65,9 @@
 				</worldEvent>
 				<randomEvent triggerChance="20%" effect="Sudden storm">
 					<outcome>Seek shelter or brave the storm, affecting health and progress.</outcome>
+				</randomEvent>
+				<randomEvent triggerChance="20%" effect="Bandit Encounter">
+					<outcome>Seek the path of stealth or brave the combatSkill, affecting health and progress.</outcome>
 				</randomEvent>
 
 			</worldEvents>

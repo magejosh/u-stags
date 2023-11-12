@@ -60,21 +60,21 @@
 
 ## Description
 
-Universal Story Tags (U-Stags) is an open-source project dedicated to creating a set of Natural Language Processing (NLP) instructions that provide a framework for condensing larger stories into smaller token counts without losing relevant details. It achieves this by associating stories with corresponding tags for efficient classification, retrieval, and organization. The detailed instructions for mapping of stories to tags can be found in `storyTagMapping.md`.
+Universal Story Tags (U-Stags) is an open-source project dedicated to creating a set of Natural Language Processing (NLP) instructions that provide a framework for condensing larger stories into smaller token counts without losing relevant details. It achieves this by associating stories with corresponding tags for efficient classification, retrieval, and organization. The detailed instructions for mapping of stories to tags can be found in `stm.md`.
 
-This project has been designed with scalability and community contribution in mind. It can be expanded to include additional functionalities as discovered and used by the community.
+This project has been designed with scalability and community contribution in mind. It can be expanded to include additional functionalities as discovered and used by the community. It relies on a context window large enough for the instruction prompt as well as a copy of stm.md or it's contents as an example in addition to the story that is being mapped. You can chunk the story for processing if needed.
 
 ## Story Tag Mapping
 
-The `storyTagMapping.md` file contains a robust set of instructions on how each story in our dataset is associated with specific tags. This file is key to understanding the organization and classification system used in this project and serves as a blueprint for condensing larger narratives. It is also the core framework all other branches come from.
+The `stm.md` file contains a robust set of instructions on how each story in our dataset is associated with specific tags. This file is key to understanding the organization and classification system used in this project and serves as a blueprint for condensing larger narratives. It is also the core framework all other branches come from.
 
 ## New Feature: Interactive Fiction Storymapping
 
-Introducing a new branch in U-Stags: U-Stags-IF (Universal Story Tags - Interactive Fiction), designed for mapping interactive game narratives. This extension focuses on altering the format of storymapping to be XML in nature which is perfect for structuring dynamic and player-driven stories elements, providing tools for creating engaging game experiences and AI assisted IF. Examples can be found in the `InteractiveExamples` folder. The expanded details for interactive story mapping can be found in `xmlStagMapping.md`.
+Introducing a new branch in U-Stags: U-Stags-IF (Universal Story Tags - Interactive Fiction), designed for mapping interactive game narratives. This extension focuses on altering the format of storymapping to be XML in nature which is perfect for structuring dynamic and player-driven stories elements, providing tools for creating engaging game experiences and AI assisted IF. Examples can be found in the `InteractiveExamples` folder. The expanded details for interactive story mapping can be found in `stm4IF.md`.
 
 ## New Feature: Adventure Path Storymapping
 
-Introducing a new branch in U-Stags: U-Stags-AP (Universal Story Tags - Adventure Path), designed for mapping interactive game narratives. This extension focuses on structuring dynamic and player-driven stories, providing tools for creating engaging game experiences. Examples can be found in the `InteractiveExamples` folder. The expanded details for interactive story mapping can be found in `xmlStagMapping.md`.
+Introducing a new branch in U-Stags: U-Stags-AP (Universal Story Tags - Adventure Path), designed for mapping interactive game narratives. This extension focuses on structuring dynamic and player-driven stories, providing tools for creating engaging game experiences. Examples can be found in the `InteractiveExamples` folder. The expanded details for interactive story mapping can be found in `adventureMapping.md`.
 
 ## Contributing
 
